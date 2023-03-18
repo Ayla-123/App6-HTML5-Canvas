@@ -79,9 +79,22 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 	<div id="header" class="w3-container w3-flat-wisteria">
 		<h1>Canvas</h1>
 	</div>
-	<canvas id="myCanvas" width="350" height="300" style="border:1px solid #000000;">
+	<canvas id="a" width="350" height="300" style="border:1px solid #000000;">
 	</canvas>
+	<button onclick="draw_a()">Rectangle</button>
+</div>
+	
+<script>
+	
+function draw_a() {
+  var a_canvas = document.getElementById("a");
+  var a_context = a_canvas.getContext("2d");
+  b_context.fillRect(50, 25, 150, 100);
+}
 
+</script>
+	
+	
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
 </footer>

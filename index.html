@@ -6,8 +6,8 @@ THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.
  
  
 Authors in chronological order of contribution:
+Ayla Amjad
 Tim Riedel
-Author 2
  
 Further Information:
 http://cns.utexas.edu/fri
@@ -17,10 +17,10 @@ Timothy Riedel
 triedel@utexas.edu
  
 Brief Description of Goal of Code:
-blah, blah, blah,
+The main goal of this code is to create a canvas that can draw a rectangle, write my name, and draw an image when clicking a button. There should also be a clear button to clear the canvas.
  
 Known Issues:
-blah, blah, blah, blah
+No known issues
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
 -->
@@ -67,7 +67,7 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 </div>
 	
 <div id="content" class="w3-container">
-	<p>Content goes here.</p>
+	<p>Want to draw? Click the button to get started!.</p>
 	
 	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>
 		
@@ -75,8 +75,9 @@ console.log("This file last modified " + docMod); // generates message in javaSc
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 
+<!--page 1 of app; where drawing canvas code is as well as the code for all buttons used to draw -->
 <div class="page" id="one">
-	<div id="header" class="w3-container w3-flat-wisteria">
+	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Canvas</h1>
 	</div>
 	<canvas id="a" width="350" height="300" style="border:1px solid #000000;">
@@ -86,37 +87,38 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 	<button onclick="image_a()">Image</button>
 	<button onclick="draw_b()">Clear</button>
 </div>
-	
+
+<!--code for pokeball image -->
 <img id="pokeball"
 src="https://www.clipartmax.com/png/small/249-2496094_pokeball-pixel-art-grid-132826-minecraft-pixel-art-pokeball.png"
 alt="Pixel Pokeball" width="300" height="300">
 	
 <script>
 	
-function draw_a() {
-  var a_canvas = document.getElementById("a");
-  var a_context = a_canvas.getContext("2d");
-  a_context.fillRect(50, 25, 150, 100);
+function draw_a() { //draws black rectange on canvas
+  var a_canvas = document.getElementById("a"); //finds canvas element in DOM
+  var a_context = a_canvas.getContext("2d"); //drawing context where all drawing methods and properties are defined
+  a_context.fillRect(50, 25, 150, 100); //draws rectangle with current filled style
 }
 
-function name_a() {
-  var a_canvas = document.getElementById("a");
-  var a_context = a_canvas.getContext("2d");
-  a_context.font = "30px Arial";
-  a_context.fillText("Ayla",10,50);
+function name_a() { //adds my name on canvas
+  var a_canvas = document.getElementById("a"); //finds canvas element in DOM
+  var a_context = a_canvas.getContext("2d"); //drawing context where all drawing methods and properties are defined
+  a_context.font = "30px Arial"; //codes for font of text
+  a_context.fillText("Ayla",10,50); //codes for actual text written
 }
 
-function image_a() {
-  var a_canvas = document.getElementById("a");
-  var a_context = a_canvas.getContext("2d");
-  var img = document.getElementById("pokeball")
-  a_context.drawImage(img,10,10);
+function image_a() { //adds image on canvas
+  var a_canvas = document.getElementById("a"); //finds canvas element in DOM
+  var a_context = a_canvas.getContext("2d"); //drawing context where all drawing methods and properties are defined
+  var img = document.getElementById("pokeball") //find image element
+  a_context.drawImage(img,10,10); //draws image on canvas
 }
 	
-function draw_b() {
-  var a_canvas = document.getElementById("a");
-  var a_context = a_canvas.getContext("2d");
-  a_context.clearRect(0, 0, 500, 500);
+function draw_b() { //clears canvas
+  var a_canvas = document.getElementById("a"); //finds canvas element in DOM
+  var a_context = a_canvas.getContext("2d"); //drawing context where all drawing methods and properties are defined
+  a_context.clearRect(0, 0, 500, 500); //clears canvas in given coordinates and area
 }
 </script>
 	

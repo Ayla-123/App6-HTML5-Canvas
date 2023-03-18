@@ -83,8 +83,12 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 	</canvas>
 	<button onclick="draw_a()">Rectangle</button>
 	<button onclick="name_a()">Name</button>
+	<button onclick="image_a()">Name</button>
 </div>
 	
+<p>image to use:</p>	
+<img id="bear"
+src="https://static.vecteezy.com/system/resources/previews/006/936/460/original/cute-bear-with-coffee-cup-cartoon-illustration-vector.jpg">
 <script>
 	
 function draw_a() {
@@ -99,7 +103,13 @@ function name_a() {
   a_context.font = "30px Arial";
   a_context.fillText("Ayla",10,50);
 }
-	
+
+function image_a() {
+  var a_canvas = document.getElementById("a");
+  var a_context = a_canvas.getContext("2d");
+  var img = document.getElementById("bear")
+  a_context.drawimage(img,10,10);
+}
 </script>
 	
 	
